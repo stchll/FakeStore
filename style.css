@@ -4,3 +4,13 @@
     box-sizing: border-box;
     font-family: 'Baloo Chetan 2';
 }
+
+body {
+    overflow-y: hidden;
+}
+
+.wrap {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
