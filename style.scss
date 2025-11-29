@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Chettan 2';
+    user-select: none;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .goodsPage {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .titlePart {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+
+                i {
+                    transform: rotate(30deg);
+                    transition: 0.5s ease;
+                }
+            }
+        }
+
+        h2:hover {
+            i {
+               transform: rotate(0); 
+               color: #8634B5;
+            }
+        }
+
+        .productsPage {
+            width: 100%;
+            height: 90vh;
+            padding: 30px;
+            display: flex;
+            
+
+        
+        }
+    }
+
+    
+}

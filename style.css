@@ -1,1 +1,47 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Chettan 2";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.wrap .goodsPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .goodsPage .titlePart {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .goodsPage .titlePart h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.wrap .goodsPage .titlePart h2 i {
+  transform: rotate(30deg);
+  transition: 0.5s ease;
+}
+.wrap .goodsPage h2:hover i {
+  transform: rotate(0);
+  color: #8634B5;
+}
+.wrap .goodsPage .productsPage {
+  width: 100%;
+  height: 90vh;
+  padding: 30px;
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
