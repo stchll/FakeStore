@@ -20,6 +20,47 @@
   display: flex;
   flex-direction: column;
 }
+.wrap .goodsPage .popupProduct {
+  width: 600px;
+  height: 450px;
+  background-color: red;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(51, 51, 51, 0.2274509804);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.wrap .goodsPage .popupProduct .imagePart {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .goodsPage .popupProduct .imagePart img {
+  width: 150px;
+  height: 150px;
+}
+.wrap .goodsPage .popupProduct .closeBtn {
+  position: absolute;
+  border-radius: 18px;
+  border: none;
+  background-color: #e65353;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  top: 15px;
+  left: 91%;
+  float: left;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(51, 51, 51, 0.5803921569);
+}
 .wrap .goodsPage .titlePart {
   width: 100%;
   height: 10vh;
@@ -42,6 +83,44 @@
 .wrap .goodsPage .productsPage {
   width: 100%;
   height: 90vh;
-  padding: 30px;
+  padding: 50px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .goodsPage .productsPage .productCard {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px rgba(51, 51, 51, 0.2274509804);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: none;
+  margin: 30px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.wrap .goodsPage .productsPage .productCard .imagePart {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+}
+.wrap .goodsPage .productsPage .productCard .imagePart img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.wrap .goodsPage .productsPage .productCard .descriptionPart {
+  padding: 10px;
+}
+.wrap .goodsPage .productsPage .productCard .descriptionPart .productName {
+  font-size: 20px;
+}
+.wrap .goodsPage .productsPage .productCard:hover {
+  box-shadow: 0 0 30px rgba(134, 52, 181, 0.3215686275);
 }/*# sourceMappingURL=style.css.map */

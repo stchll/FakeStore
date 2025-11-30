@@ -18,6 +18,50 @@
         display: flex;
         flex-direction: column;
 
+        .popupProduct {
+            width: 600px;
+            height: 450px;
+            background-color: red;
+            position: fixed;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            z-index: 5;
+            border-radius: 18px;
+            box-shadow: 0 0 30px #3333333a;
+            background-color: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+
+            .imagePart {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            .closeBtn {
+                position: absolute;
+                border-radius: 18px;
+                border: none;
+                background-color: #e65353;
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                top: 15px;
+                left: 91%;
+                float: left;
+                cursor: pointer;
+                box-shadow: 0 0 20px #33333394;
+            }
+        }
+
         .titlePart {
             width: 100%;
             height: 10vh;
@@ -46,13 +90,51 @@
         .productsPage {
             width: 100%;
             height: 90vh;
-            padding: 30px;
+            padding: 50px;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             
+            .productCard {
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 0 30px #3333333a;
+                background-color: rgba(255,255,255,0.08);
+                border: 1px solid rgba(255,255,255,0.15);
+                backdrop-filter: blur(15px);
+                display: none;
+                margin: 30px;
+                border-radius: 18px;
+                cursor: pointer;
 
+                .imagePart{
+                    width: 100%;
+                    height: 250px;
+                    padding: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .descriptionPart {
+                    padding: 10px;
+
+                    .productName {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .productCard:hover {
+                box-shadow: 0 0 30px #8634b552;
+            }
         
         }
     }
-
-    
 }
