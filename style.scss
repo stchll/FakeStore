@@ -23,7 +23,7 @@
         flex-direction: column;
 
         .popupProduct {
-            display: none;
+            display: flex;
             width: 680px;
             min-height: 480px;
             padding: 25px;
@@ -38,7 +38,7 @@
             position: fixed;
             
             z-index: 5;
-            display: flex;
+            display: none;
             flex-direction: column;
             gap: 20px;
             

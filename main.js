@@ -15,9 +15,15 @@ const buttons = {
 
 let products = []
 
-function setupPopup() {
+function setupPopup(product) {
     objects.popup.style.display = 'flex'
     
+    for (let child of Object.keys(product)) {
+        console.log(Object.values(child));
+        
+        
+        
+    }
 
     buttons.popupClose.onclick = function() {
         objects.popup.style.display = 'none'
