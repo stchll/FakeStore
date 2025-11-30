@@ -6,9 +6,23 @@ const pages = {
 
 const objects = {
     productCard: document.getElementById('productCard'),
+    popup: document.getElementById('popup')
+}
+
+const buttons = {
+    popupClose: document.getElementById('popupClose'),
 }
 
 let products = []
+
+function setupPopup() {
+    objects.popup.style.display = 'flex'
+    
+
+    buttons.popupClose.onclick = function() {
+        objects.popup.style.display = 'none'
+    }
+}
 
 function loadCurrentProducts() {
     let link = `https://fakestoreapi.com/products`
@@ -25,13 +39,18 @@ function loadCurrentProducts() {
             card.style.display = 'flex'
             card.querySelector('#productImg').src = product.image
             card.querySelector('#productDescription').textContent = product.title
+            card.querySelector('#productPrice').textContent = `$${product.price}`
             pages.product.append(card)
 
             products.push(card)
+
+            card.onclick = function() {
+                setupPopup(product)
+            }
         }
     })
 }
 
-loadCurrentProducts()
-loadCurrentProducts()
-loadCurrentProducts()
+setTimeout(()=>{
+    loadCurrentProducts()
+},3000)
