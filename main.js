@@ -18,7 +18,7 @@ let products = []
 function setupPopup(product) {
     objects.popup.style.display = 'flex'
     
-    objects.popup.
+    objects.popup.querySelector('.imagePart').querySelector('img').src = product.image
 
     buttons.popupClose.onclick = function() {
         objects.popup.style.display = 'none'
