@@ -6,7 +6,9 @@ const pages = {
 
 const objects = {
     productCard: document.getElementById('productCard'),
-    popup: document.getElementById('popup')
+    popup: document.getElementById('popup'),
+    descriptionPart: document.getElementById('descriptionPopupPart'),
+    clothName: document.getElementById('clothName'),
 }
 
 const buttons = {
@@ -19,6 +21,7 @@ function setupPopup(product) {
     objects.popup.style.display = 'flex'
     
     objects.popup.querySelector('.imagePart').querySelector('img').src = product.image
+    objects.clothName.textContent = product.title
 
     buttons.popupClose.onclick = function() {
         objects.popup.style.display = 'none'
@@ -52,6 +55,4 @@ function loadCurrentProducts() {
     })
 }
 
-setTimeout(()=>{
-    loadCurrentProducts()
-},3000)
+loadCurrentProducts()
