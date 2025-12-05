@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FakeStore</title>
+    <link rel='stylesheet' href='https://site-assets.fontawesome.com/releases/v7.0.1/css/all.css'>
     <link rel="stylesheet" href="./style.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css' integrity='sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw==' crossorigin='anonymous'/>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:regular,500,600,700,800" rel="stylesheet" />
@@ -18,10 +19,53 @@
         </div>
 
         <!-- Степан -->
-        <div class="goodsPage"></div>
+        <div class="goodsPage">
+            <div class="popupProduct" id="popup">
+                <button class="closeBtn" id="popupClose"><i class="fa-solid fa-xmark"></i></button>
+
+                <div class="imagePart">
+                    <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png">
+                </div>
+
+                <div class="descriptionPart">
+
+                </div>
+            </div>
+
+            <div class="titlePart">
+                <h2><i class="fa-solid fa-shirt"></i>Goods Page</h2>
+            </div>
+
+            <div class="productsPage" id="productPage">
+                <div class="productCard" id="productCard">
+                    <div class="imagePart">
+                        <img src="" id="productImg">
+                    </div>
+
+                    <div class="descriptionPart">
+                        <h3 class="productName" id="productDescription">Clothing name</h3>
+
+                        <p class="productPrice" id="productPrice">Price$</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
         <!-- Святослав -->
-        <div class="contactPage"></div>
+        <div class="contactPage">
+            <section class="subscribe">
+  <div class="box">
+    <p>Слідкуйте за нашими товарами</p>
+    <input type="email" id="email" placeholder="Введіть ваш email">
+    <button id="subscribeBtn">Підписатися</button>
+  </div>
+
+  <div class="message" id="message">Підписку оформлено ✅</div>
+</section>
+
+        </div>
 
         <!-- Артур -->
         <div class="popularProductPage"></div>
