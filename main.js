@@ -15,13 +15,40 @@ const buttons = {
     popupClose: document.getElementById('popupClose'),
 }
 
+const sounds = {
+    fade: new Audio('./Sounds/fade.mp3')
+}
+
+sounds.fade.volume = 0.2
+
 let products = []
+
+function typeWrite(object,content) {
+    let current = 0
+
+    object.textContent = ""
+
+    function type() {
+        if (current <= content.length - 1) {
+            object.textContent += content[current]
+
+            current ++
+
+            setTimeout(type,10)
+        } else {
+            object.textContent = content
+        }
+    }
+
+    type()
+}
 
 function setupPopup(product) {
     objects.popup.style.display = 'flex'
     
     objects.popup.querySelector('.imagePart').querySelector('img').src = product.image
-    objects.clothName.textContent = product.title
+
+    typeWrite(objects.clothName,product.title)
 
     buttons.popupClose.onclick = function() {
         objects.popup.style.display = 'none'
@@ -50,6 +77,9 @@ function loadCurrentProducts() {
 
             card.onclick = function() {
                 setupPopup(product)
+
+                sounds.fade.currentTime = 0
+                sounds.fade.play()
             }
         }
     })
